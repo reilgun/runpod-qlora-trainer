@@ -6,6 +6,7 @@ It will fetch your own training launch script (see `scripts/run_flash.sh` as an 
 
 Optionally, it can upload the full output with all checkpoints to a specified S3 Bucket of your choice using your credentials, supporting third party S3 compatible object storage as well.
 
+Dockerhub: https://hub.docker.com/r/reilgun/runpod-qlora-trainer
 ## Getting started
 You only need to set two environment variables
 
