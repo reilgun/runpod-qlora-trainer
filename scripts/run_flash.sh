@@ -12,7 +12,7 @@ python flash_qlora.py  \
     --do_mmlu_eval False \
     --do_train \
     --double_quant \
-    --eval_dataset_size 128 \
+    --eval_dataset_size 5 \
     --eval_steps 361 \
     --evaluation_strategy steps \
     --gradient_accumulation_steps 1 \
@@ -25,7 +25,7 @@ python flash_qlora.py  \
     --lora_modules all \
     --lora_r 64  \
     --lr_scheduler_type constant \
-    --max_eval_samples 64 \
+    --max_eval_samples 5 \
     --max_grad_norm 0.3 \
     --max_new_tokens 250 \
     --max_steps -1 \
