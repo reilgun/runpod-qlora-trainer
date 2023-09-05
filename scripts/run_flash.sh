@@ -1,0 +1,45 @@
+python flash_qlora.py  \
+    --model_name_or_path jondurbin/airoboros-l2-13b-2.1  \
+    --output_dir /workspace/output/airoboros-13b  \
+    --dataset /workspace/dataset.jsonl  \
+    --adam_beta2 0.999 \
+    --bf16 \
+    --bits 4 \
+    --data_seed 11422 \
+    --dataloader_num_workers 2 \
+    --ddp_find_unused_parameters False \
+    --do_eval \
+    --do_mmlu_eval False \
+    --do_train \
+    --double_quant \
+    --eval_dataset_size 128 \
+    --eval_steps 361 \
+    --evaluation_strategy steps \
+    --gradient_accumulation_steps 1 \
+    --gradient_checkpointing \
+    --learning_rate 0.0002 \
+    --logging_steps 1 \
+    --logging_strategy steps \
+    --lora_alpha 16 \
+    --lora_dropout 0.1 \
+    --lora_modules all \
+    --lora_r 64  \
+    --lr_scheduler_type constant \
+    --max_eval_samples 64 \
+    --max_grad_norm 0.3 \
+    --max_new_tokens 250 \
+    --max_steps -1 \
+    --model_max_len 4096 \
+    --num_train_epochs 2 \
+    --per_device_eval_batch_size 1 \
+    --per_device_train_batch_size 1 \
+    --quant_type nf4 \
+    --remove_unused_columns False \
+    --save_steps 200 \
+    --save_strategy steps \
+    --save_total_limit 3 \
+    --seed 11422 \
+    --source_max_len 4090 \
+    --target_max_len 512 \
+    --warmup_ratio 0.03 \
+    --weight_decay 0.0 \
