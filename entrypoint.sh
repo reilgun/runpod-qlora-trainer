@@ -29,7 +29,7 @@ if [ "$S3_VARS_SET" = true ]; then
   if [ -n "$S3_ENDPOINT_URL" ]; then
     echo "Connecting to endpoint $S3_ENDPOINT_URL"
 
-    CHECK_S3_CMD="aws s3 ls s3://$S3_BUCKET/ --debug --endpoint-url $S3_ENDPOINT_URL"
+    CHECK_S3_CMD="aws s3 ls s3://$S3_BUCKET/ --endpoint-url $S3_ENDPOINT_URL"
   else
     CHECK_S3_CMD="aws s3 ls s3://$S3_BUCKET/"
   fi
