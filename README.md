@@ -27,6 +27,7 @@ In order to use S3, you need to set the following environment variables:
 - `AWS_ACCESS_KEY_ID`
 - `AWS_SECRET_ACCESS_KEY`
 - `S3_BUCKET`
+- `AWS_DEFAULT_REGION` (region your bucket is in)
 
 S3 bucket should be the bucket *name* and nothing else, for example: `train-results` and *not* `s3://train-results` nor `train-results.s3.amazonaws.com`
 
