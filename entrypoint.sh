@@ -72,7 +72,7 @@ START_SH_PID=$!
 
 mkdir -p /workspace/output
 # Execute the downloaded script in the foreground
-bash scripts/run_lora.sh >> /workspace/output/train.log 2>&1
+bash scripts/run_lora.sh 2>&1 | tee -a /workspace/output/train.log
 
 # Zip the contents of /workspace/output and upload to S3 if AWS credentials are present
 if [ -n "$AWS_ACCESS_KEY_ID" ] && [ -n "$AWS_SECRET_ACCESS_KEY" ] && [ -n "$S3_BUCKET" ]; then
