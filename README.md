@@ -34,3 +34,6 @@ If your S3 Bucket is **not** on Amazon Web Services, you also need to specify `S
 
 #### Dataset from S3 Bucket
 If AWS credentials are provided, and your `DATASET` environment variable is set to a value starting with `s3://`, it will attempt to download your dataset from the bucket using your credentials.
+
+## Usage outside of runpod.io
+This contaienr should work just fine on any other cloud, except that it won't be able to directly shut down your pod after training.
