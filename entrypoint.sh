@@ -3,6 +3,7 @@
 # Verify that all required variables are set
 if [ -z "$LORA_SCRIPT" ]; then
   echo "Error: Missing one or more required environment variables (LORA_SCRIPT)."
+  sleep 2m
   runpodctl stop pod $RUNPOD_POD_ID
   exit 1
 fi
@@ -20,6 +21,7 @@ if [ "$S3_VARS_SET" = true ]; then
   # Verify that all required variables are set
   if [ -z "$AWS_ACCESS_KEY_ID" ] || [ -z "$AWS_SECRET_ACCESS_KEY" ] || [ -z "$S3_BUCKET" ]; then
     echo "Error: Missing one or more required S3 environment variables (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, S3_BUCKET)."
+    sleep 2m
     runpodctl stop pod $RUNPOD_POD_ID
     exit 1
   fi
@@ -36,6 +38,7 @@ if [ "$S3_VARS_SET" = true ]; then
 
   if ! $CHECK_S3_CMD; then
     echo "Error: Unable to access S3 bucket with the provided credentials or bucket is not writable."
+    sleep 2m
     runpodctl stop pod $RUNPOD_POD_ID
     exit 1
   fi
@@ -98,6 +101,6 @@ kill $START_SH_PID
 if [ "$#" -gt 0 ]; then
     "$@"
 fi
-
+sleep 2m
 # Stop the container to save money
 runpodctl stop pod $RUNPOD_POD_ID
