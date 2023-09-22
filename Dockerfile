@@ -26,3 +26,4 @@ RUN chmod +x /workspace/qlora/entrypoint.sh
 
 # Set the entrypoint
 ENTRYPOINT ["/workspace/qlora/entrypoint.sh"]
+CMD []
