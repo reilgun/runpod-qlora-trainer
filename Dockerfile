@@ -12,7 +12,7 @@ RUN pip install ninja
 RUN pip install flash_attn
 
 # Clone the qlora repository
-RUN git clone https://github.com/LagPixelLOL/qlora.git
+RUN git clone https://github.com/reilgun/qlora.git
 
 # Change to qlora directory and install requirements
 WORKDIR /workspace/qlora
