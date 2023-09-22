@@ -31,15 +31,15 @@ python flash_qlora.py  \
     --max_steps -1 \
     --model_max_len 4096 \
     --num_train_epochs 2 \
-    --per_device_eval_batch_size 4 \
-    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 8 \
+    --per_device_train_batch_size 8 \
     --quant_type nf4 \
     --remove_unused_columns False \
     --save_steps 200 \
     --save_strategy steps \
     --save_total_limit 15 \
     --seed 11422 \
-    --source_max_len 4090 \
+    --source_max_len 4096 \
     --target_max_len 4000 \
     --warmup_ratio 0.03 \
     --weight_decay 0.0 \
